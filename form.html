@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+    form {
+      margin: 1rem auto;
+      width: 500px;
+      padding: 0.5rem;
+      background-color: lightgray;
+    }
+    .col {
+      display: grid;
+      grid-template-columns: repeat(2, 200px);
+      grid-gap: 20px;
+    }
+    .center {
+      text-align: center;
+      margin: auto;
+    }
+    table,
+    tr,
+    td,
+    th {
+      text-align: center;
+      padding: auto;
+      border: none;
+      border-collapse: collapse;
+    }
+
+    .checked {
+      color: orange;
+    }
+
+    .light-gray {
+      background-color: rgba(138, 135, 135, 0.2);
+    }
+    button {
+      background-color: rgb(26, 236, 26);
+    }
+
+    @media only screen and (max-width: 780px) {
+      body {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      form {
+        margin: 2rem auto;
+        padding: 0.5rem;
+
+        background-color: lightgray;
+      }
+    }
+  </style>
+  <body>
+    <form action="submit" id="form">
+      <label for="name">Name</label>
+      <br />
+      <div class="col">
+        <input type="text" name="first" required />
+        <input type="text" name="last" />
+      </div>
+      <div class="col">
+        <label for="first">First</label>
+        <label for="last">Last</label>
+      </div>
+      <br />
+
+      <label for="email">Email</label>
+      <br />
+      <input text="email" name="email" style="width: 410px;" />
+      <!------star-->
+      <br />
+      <br />
+      <label for="rating">Your Experience</label>
+      <br />
+      <span class="fa fa-star fa-2x checked"></span>
+      <span class="fa fa-star fa-2x checked"></span>
+      <span class="fa fa-star fa-2x checked"></span>
+      <span class="fa fa-star fa-2x checked"></span>
+      <span class="fa fa-star fa-2x checked"></span>
+      <span class="fa fa-star fa-2x checked"></span>
+      <br />
+      <h4>How satisfiad are you with</h4>
+      <!-------table-->
+      <table>
+        <tr>
+          <td></td>
+          <td>very unsatisfied</td>
+          <td id="w">unsatisfied</td>
+          <td id="w">nutral</td>
+          <td id="w">satisfied</td>
+          <td id="w">very satisfied</td>
+        </tr>
+        <tr class="light-gray">
+          <td>purchse</td>
+          <td id="w"><input type="radio" class="center" /></td>
+          <td id="w"><input type="radio" class="center" /></td>
+          <td id="w"><input type="radio" class="center" /></td>
+          <td id="w"><input type="radio" class="center" /></td>
+          <td id="w"><input type="radio" class="center" /></td>
+        </tr>
+        <tr>
+          <td>service</td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+        </tr>
+        <tr class="light-gray">
+          <td>Company</td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+        </tr>
+      </table>
+      <!-------2nd table-->
+      <table>
+        <h4>How likely are you to</h4>
+        <tr>
+          <td></td>
+          <td>very unsatisfied</td>
+          <td>unsatisfied</td>
+          <td>nutral</td>
+          <td>satisfied</td>
+          <td>very satisfied</td>
+        </tr>
+        <tr class="light-gray">
+          <td>Buy from us again</td>
+          <td><input type="radio" class="center" /></td>
+          <td><input type="radio" class="center" /></td>
+          <td><input type="radio" class="center" /></td>
+          <td><input type="radio" class="center" /></td>
+          <td><input type="radio" class="center" /></td>
+        </tr>
+        <tr>
+          <td>Recommend our product to other</td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+        </tr>
+        <tr class="light-gray">
+          <td>Recommend our company to other</td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+          <td><input type="radio" /></td>
+        </tr>
+      </table>
+      <h4>Additional comments or suggestion</h4>
+      <textarea type="text" cols="60" rows="4"></textarea>
+      <br />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
